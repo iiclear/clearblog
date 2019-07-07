@@ -144,8 +144,6 @@ def register_commands(app):
     @click.option('--password', prompt=True, hide_input=True,
                   confirmation_prompt=True, help='The password used to login.')
     def init(username, password):
-        """Building Bluelog, just for you."""
-
         click.echo('Initializing the database...')
         db.create_all()
 
