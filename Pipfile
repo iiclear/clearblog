@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask-bootstrap = "*"
+bootstrap-flask = "*"
 
 [requires]
 python_version = "3.4"
