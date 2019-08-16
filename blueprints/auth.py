@@ -4,10 +4,9 @@ auth_bp = Blueprint('auth',__name__)
 
 from forms import LoginForm
 @auth_bp.route('/login', methods=['GET', 'POST'])
-@login_required
 def login():
-    form = LoginForm()
+    form = LoginForm()#
     # 登陆成功进入用户首页，失败返回之前页面
-    return render_template('auth/login.html',form=form)
+    return render_template('auth/login.html', form=form)
 
 

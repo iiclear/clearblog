@@ -12,7 +12,6 @@ def register_commands(app):
 
         db.drop_all()
         db.create_all()
-
         click.echo('Generating the administrator...')
         fake_admin()
 
