@@ -6,19 +6,5 @@
 {#文章列表，分页,用的是bootstrap/pagiantion。学习#}
 {#侧边栏 ，上边显示友情链接列表，下边是竖排标签列表,对应blog/sidebar.html#}
 {% block content %}
-<div class="page-header">
-        <h1 class="display-3">{{ admin.blog_title|default('Blog Title') }}</h1>
-        <h4 class="text-muted">&nbsp;{{ admin.blog_sub_title|default('Blog Subtitle') }}</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-8">
-            {% include 'blog/_posts.html' %}
-            {% if posts %}
-                <div class="page-footer">{{ render_pager(pagination) }}</div>
-            {% endif %}
-        </div>
-        <div class="col-sm-4 sidebar">
-            {% include 'blog/_sidebar.html' %}
-        </div>
-    </div>
+
 {% endblock %}
