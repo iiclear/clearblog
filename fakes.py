@@ -8,6 +8,7 @@ fake = Faker('zh_CN')
 def fake_admin():
     admin = Admin(
         username='admin',
+        password='admin',
         blog_title='PY-Blog',
         blog_sub_title="人间正道是沧桑",
         name='clear',
