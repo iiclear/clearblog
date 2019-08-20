@@ -1,5 +1,6 @@
 from extensions import db
 from flask_login import UserMixin
+
 #管理员表
 class Admin(db.Model,UserMixin):
     id = db.Column(db.Integer, primary_key=True)
