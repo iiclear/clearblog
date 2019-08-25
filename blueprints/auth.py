@@ -4,6 +4,7 @@ auth_bp = Blueprint('auth',__name__)
 
 from forms import LoginForm
 from models import Admin
+from helper import redirect_back
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -18,10 +19,16 @@ def login():
             if username == admin.username and admin.password==password:
                 login_user(admin, remember)
                 flash('Welcome back.', 'info')
-                return 'Welcome back.'
-            flash('Invalid username or password.', 'warning')
+                return redirect_back()
+            flash('错误的密码或账户.', 'warning')
         else:
-            flash('No account.', 'warning')
+            flash('查无此号.', 'warning')
     return render_template('auth/login.html', form=form)
 
 
+@auth_bp.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('Logout success.', 'info')
+    return redirect_back()

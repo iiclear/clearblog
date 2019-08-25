@@ -29,16 +29,16 @@ class BaseConfig(object):
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = ('Bluelog Admin', MAIL_USERNAME)
 
-    BLUELOG_EMAIL = os.getenv('BLUELOG_EMAIL')
-    BLUELOG_POST_PER_PAGE = 10
-    BLUELOG_MANAGE_POST_PER_PAGE = 15
-    BLUELOG_COMMENT_PER_PAGE = 15
+    CLEARLOG_EMAIL = os.getenv('BLUELOG_EMAIL')
+    CLEARLOG_POST_PER_PAGE = 10
+    CLEARLOG_MANAGE_POST_PER_PAGE = 15
+    CLEARLOG_COMMENT_PER_PAGE = 15
     # ('theme name', 'display name')
-    BLUELOG_THEMES = {'perfect_blue': 'Perfect Blue', 'black_swan': 'Black Swan'}
-    BLUELOG_SLOW_QUERY_THRESHOLD = 1
+    CLEARLOG_THEMES = {'perfect_blue': 'Perfect Blue', 'black_swan': 'Black Swan'}
+    CLEARLOG_SLOW_QUERY_THRESHOLD = 1
 
-    BLUELOG_UPLOAD_PATH = os.path.join(basedir, 'uploads')
-    BLUELOG_ALLOWED_IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
+    CLEARLOG_UPLOAD_PATH = os.path.join(basedir, 'uploads')
+    CLEARLOG_ALLOWED_IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
 
 
 class DevelopmentConfig(BaseConfig):
